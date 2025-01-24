@@ -48,8 +48,8 @@ This is a simple web application developed using Node.js and Express. The applic
 Open your web browser and navigate to http://localhost:3000/ to view a motivational quote.
 
 ## Usage
-	- View a Quote: Access the home page to see a random motivational quote.
-	- Refresh for New Quote: Refresh the browser page to view a different quote.
+- View a Quote: Access the home page to see a random motivational quote.
+- Refresh for New Quote: Refresh the browser page to view a different quote.
 
 ## Contributing
 
