@@ -39,3 +39,38 @@ Flask was chosen for this web application due to its lightweight nature and flex
 
 - **Modularity:**
   - Designed the application with modularity in mind, allowing for easy future expansions or feature additions.
+
+# Unit Tests Documentation
+
+## Test Framework: pytest
+
+I use pytest for our testing framework due to its simplicity and powerful features.
+
+## Tests Implemented
+
+1. **Home Page Test (`test_home_page`)**
+   - Verifies that the home page returns a 200 status code
+   - Checks if the page contains the expected heading
+   - Ensures the basic functionality of the Flask application
+
+2. **Time Format Test (`test_moscow_time_format`)**
+   - Validates the correct formatting of Moscow time
+   - Ensures the time string follows the expected format (YYYY-MM-DD HH:MM:SS)
+
+## Best Practices Applied in Testing
+
+1. **Test Fixtures**
+   - Used pytest fixtures for setting up test client
+   - Ensures clean test environment for each test
+
+2. **Isolated Tests**
+   - Each test focuses on a single functionality
+   - Tests are independent of each other
+
+3. **Clear Test Names**
+   - Descriptive test names that indicate what is being tested
+   - Makes it easy to identify test purposes
+
+4. **Assertions**
+   - Specific assertions that check exact conditions
+   - Clear failure messages for debugging

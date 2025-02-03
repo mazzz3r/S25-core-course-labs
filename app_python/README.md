@@ -1,5 +1,9 @@
 # Python Web Application: Current Time in Moscow
 
+```markdown
+![CI Status](https://github.com/mazzz3r/S25-core-course-labs/actions/workflows/python-app.yml/badge.svg)
+```
+
 ## Overview
 
 This is a simple web application developed using Python's Flask framework. The application displays the current time in Moscow and updates it upon each page refresh.
@@ -131,6 +135,64 @@ Open your web browser and navigate to http://localhost:5000/ to view the contain
 ## Usage
 - View Current Time: Upon accessing the application, the current time in Moscow is displayed.
 - Refresh for Update: Refresh the browser page to see the updated time.
+
+## Continuous Integration (CI) Workflow
+
+This project implements a comprehensive CI workflow using GitHub Actions. The workflow automates building, testing, and deploying our application.
+
+### Workflow Steps
+
+1. **Dependencies Installation**
+   - Sets up Python 3.9 environment
+   - Installs required packages from requirements.txt
+   - Implements caching for faster builds
+
+2. **Code Quality Checks**
+   - Runs Flake8 linter
+   - Enforces PEP 8 style guide
+   - Checks for syntax errors and code complexity
+
+3. **Automated Testing**
+   - Executes pytest suite
+   - Validates core functionality
+   - Ensures code reliability
+
+4. **Docker Integration**
+   - Logs into Docker Hub
+   - Builds Docker image
+   - Pushes image to registry
+
+### Triggering the Workflow
+
+The CI pipeline automatically runs on:
+- Push to main branch
+- Pull request to main branch
+
+For detailed information about our CI implementation and best practices, see [CI.md](CI.md).
+
+## Unit Tests
+
+The application includes comprehensive unit tests to ensure reliability and correct functionality.
+
+### Running Tests
+
+To run the tests:
+
+    ```bash
+    cd app_python
+    pytest
+    ```
+
+
+### Test Coverage
+
+The tests cover:
+- Home page functionality
+- Moscow time formatting
+- Response status codes
+- Content verification
+
+For detailed information about the tests and testing practices, see `PYTHON.md`.
 
 ## Contributing
 
