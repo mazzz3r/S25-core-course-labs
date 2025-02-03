@@ -1,8 +1,6 @@
 # Python Web Application: Current Time in Moscow
 
-```markdown
 ![CI Status](https://github.com/mazzz3r/S25-core-course-labs/actions/workflows/python-app.yml/badge.svg)
-```
 
 ## Overview
 
