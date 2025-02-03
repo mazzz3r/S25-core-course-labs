@@ -17,10 +17,12 @@ This document outlines the Dockerization process of the Python web application t
    - **User Created:** `appuser`
    - **Group Created:** `appgroup`
    - **Implementation:**
+
      ```dockerfile
      RUN addgroup -S appgroup && adduser -S appuser -G appgroup
      USER appuser
      ```
+
    - **Reason:** Running applications as non-root users enhances security by limiting permissions and reducing the attack surface.
 
 4. **Environment Variables:**
@@ -33,10 +35,12 @@ This document outlines the Dockerization process of the Python web application t
 
 6. **Selective File Copying:**
    - **Implementation:**
+
      ```dockerfile
      COPY app.py ./
      COPY templates/ templates/
      ```
+
    - **Reason:** Copying only necessary files ensures a lean build context and reduces the final image size.
 
 7. **Dockerignore Usage:**

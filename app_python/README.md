@@ -2,7 +2,7 @@
 
 ![CI Status](https://github.com/mazzz3r/S25-core-course-labs/actions/workflows/python-app.yml/badge.svg)
 
-## Overview
+## What is it?
 
 This is a simple web application developed using Python's Flask framework. The application displays the current time in Moscow and updates it upon each page refresh.
 
@@ -38,27 +38,27 @@ OR
    cd S25-core-course-labs/app_python
    ```
 
-2.	Create a Virtual Environment:
+2. Create a Virtual Environment:
 
     ```bash
     python3 -m venv venv
     source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
 
-3.	Install Dependencies:
+3. Install Dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-4.	Run the Application:
+4. Run the Application:
 
     ```bash
     python app.py
     ```
 
-5.	Access the Application:
-    Open your web browser and navigate to http://127.0.0.1:5000/ to view the current time in Moscow.
+5. Access the Application:
+    Open your web browser and navigate to <http://127.0.0.1:5000/> to view the current time in Moscow.
 
 ### Via Docker
 
@@ -71,22 +71,23 @@ Containerize the Python web application using Docker to ensure consistent enviro
 This option allows you to quickly deploy and test the application without building the Docker image yourself.
 
 Steps:
-1.	Pull the Docker Image from Docker Hub
+
+1. Pull the Docker Image from Docker Hub
 
     ```bash
     docker pull mazzz3r/app_python:lab2
     ```
 
-2.	Run the Docker Container
+2. Run the Docker Container
 
     ```bash
     docker run -d -p 5000:5000 --name app_python_lab2 mazzz3r/app_python:lab2
     ```
 
-3.	Access the Application
-Open your web browser and navigate to http://localhost:5000/ to view the containerized application.
+3. Access the Application
+Open your web browser and navigate to <http://localhost:5000/> to view the containerized application.
 
-4.	Stop and Remove the Container (Optional)
+4. Stop and Remove the Container (Optional)
 
     ```bash
     docker stop app_python_lab2
@@ -98,39 +99,41 @@ Open your web browser and navigate to http://localhost:5000/ to view the contain
 Building the Docker image from source provides a deeper understanding of the Dockerization process and allows for customization.
 
 Steps:
-1.	Navigate to the app_python Directory
+
+1. Navigate to the app_python Directory
 
     ```bash
     cd app_python
     ```
 
-2.	Build the Docker Image
+2. Build the Docker Image
 
     ```bash
     docker build -t mazzz3r/app_python:lab2 .
     ```
 
-	- Explanation:
-	- -t mazzz3r/app_python:lab2: Tags the image with your username and a specific tag (lab2).
-	- .: Specifies the current directory as the build context.
+    - Explanation:
+      - -t mazzz3r/app_python:lab2: Tags the image with your username and a specific tag (lab2).
+        - .: Specifies the current directory as the build context.
 
-3.	Run the Docker Container
+3. Run the Docker Container
 
     ```bash
     docker run -d -p 5000:5000 --name app_python_lab2 mazzz3r/app_python:lab2
     ```
 
-4.	Access the Application
-Open your web browser and navigate to http://localhost:5000/ to view the containerized application.
-5.	Stop and Remove the Container (Optional)
+4. Access the Application
+Open your web browser and navigate to <http://localhost:5000/> to view the containerized application.
+
+5. Stop and Remove the Container (Optional)
 
     ```bash
     docker stop app_python_lab2
     docker rm app_python_lab2
     ```
 
-
 ## Usage
+
 - View Current Time: Upon accessing the application, the current time in Moscow is displayed.
 - Refresh for Update: Refresh the browser page to see the updated time.
 
@@ -168,6 +171,7 @@ This project implements a comprehensive CI workflow using GitHub Actions. The wo
 ### Triggering the Workflow
 
 The CI pipeline automatically runs on:
+
 - Push to main branch
 - Pull request to main branch
 
@@ -181,15 +185,15 @@ The application includes comprehensive unit tests to ensure reliability and corr
 
 To run the tests:
 
-    ```bash
-    cd app_python
-    pytest
-    ```
-
+```bash
+cd app_python
+pytest
+```
 
 ### Test Coverage
 
 The tests cover:
+
 - Home page functionality
 - Moscow time formatting
 - Response status codes
@@ -208,16 +212,16 @@ Contributions are welcome! Please follow these steps:
     git checkout -b feature/YourFeature
     ```
 
-3.	Commit Your Changes
+3. Commit Your Changes
 
     ```bash
     git commit -m "Add Your Feature"
     ```
 
-4.	Push to the Branch
+4. Push to the Branch
 
     ```bash
     git push origin feature/YourFeature
     ```
 
-5.	Open a Pull Request
+5. Open a Pull Request

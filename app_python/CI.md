@@ -16,6 +16,7 @@
    - Secrets stored in GitHub Secrets
    - No sensitive data in workflow files
    - Docker Hub credentials secured
+   - Snyk security scanning implemented
 
 4. **Build Efficiency**
    - Used Docker layer caching
