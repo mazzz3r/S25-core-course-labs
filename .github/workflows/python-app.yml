@@ -5,9 +5,11 @@ on:
   push:
     paths:
       - 'app_python/**'
+      - '.github/workflows/python-app.yml'
   pull_request:
     paths:
       - 'app_python/**'
+      - '.github/workflows/python-app.yml'
 
 jobs:
   build:
