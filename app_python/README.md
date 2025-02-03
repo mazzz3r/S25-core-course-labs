@@ -155,7 +155,12 @@ This project implements a comprehensive CI workflow using GitHub Actions. The wo
    - Validates core functionality
    - Ensures code reliability
 
-4. **Docker Integration**
+4. **Security Scanning**
+   - Uses Snyk to scan dependencies
+   - Checks for known vulnerabilities
+   - Monitors project dependencies
+
+5. **Docker Integration**
    - Logs into Docker Hub
    - Builds Docker image
    - Pushes image to registry
