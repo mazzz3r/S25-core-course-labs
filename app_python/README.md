@@ -1,16 +1,28 @@
-# Python Web Application: Current Time in Moscow
+# Python Application
 
-![CI Status](https://github.com/mazzz3r/S25-core-course-labs/actions/workflows/python-app.yml/badge.svg)
-
-## What is it?
-
-This is a simple web application developed using Python's Flask framework. The application displays the current time in Moscow and updates it upon each page refresh.
+A simple Flask application that displays a greeting and counts visits.
 
 ## Features
 
-- **Real-Time Moscow Time:** Displays the current time in the Moscow timezone.
-- **Simple and Clean Interface:** User-friendly interface with minimalistic design.
-- **Easy to Deploy:** Simple setup process with clear instructions.
+- Displays a greeting with the hostname
+- Counts and persists the number of visits
+- Health check endpoint
+- Version information endpoint
+
+## Endpoints
+
+- `/` - Main page with greeting and visit counter
+- `/visits` - Returns the current visit count
+- `/health` - Health check endpoint
+- `/version` - Version information endpoint
+
+## Running with Docker Compose
+
+```bash
+docker-compose up -d
+```
+
+This will start the application and make it available at http://localhost:8080
 
 ## Technologies Used
 

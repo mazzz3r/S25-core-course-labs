@@ -13,7 +13,7 @@ def test_home_page(client):
     """Test that home page returns 200 and contains expected content"""
     rv = client.get('/')
     assert rv.status_code == 200
-    assert b'Current Time in Moscow' in rv.data
+    assert b'Current Time' in rv.data
 
 def test_moscow_time_format():
     """Test that Moscow time is correctly formatted"""

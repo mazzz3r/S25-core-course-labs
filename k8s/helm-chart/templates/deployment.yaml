@@ -25,10 +25,21 @@ spec:
         {{- include "helm-chart.selectorLabels" . | nindent 8 }}
     spec:
       serviceAccountName: {{ include "helm-chart.serviceAccountName" . }}
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "helm-chart.fullname" . }}-config
+        - name: data-volume
+          emptyDir: {}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+            - name: data-volume
+              mountPath: /data
           env:
             - name: MY_USERNAME
               valueFrom:
